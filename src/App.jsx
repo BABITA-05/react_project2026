@@ -14,6 +14,9 @@ let App = () =>{
         <h4>
           <Link to={"/register"}>Register</Link>
         </h4>
+        <h4>
+          <Link to={"/foodMenu"}>Food Menu</Link>
+        </h4>
       </div>
       <Outlet/>
       <Footer/>

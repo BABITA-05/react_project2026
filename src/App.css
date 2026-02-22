@@ -16,6 +16,7 @@
 .home{
   margin-left: 10%;
   margin-right: 10%;
+  
 }
 
 .login {
@@ -87,4 +88,22 @@
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.fulbutta{
+  display: flex;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  gap: 70px;
+
+}
+.menu{
+  background-color: black;
+  color: white;
+  padding-left: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+.btn{
+  font-weight: bold;
 }
