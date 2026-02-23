@@ -92,9 +92,11 @@
 
 .fulbutta{
   display: flex;
-  padding-top: 60px;
+  background-color: black;
   padding-bottom: 60px;
-  gap: 70px;
+  gap: 5px;
+  padding-right: 0px;
+  position: relative;
 
 }
 .menu{
@@ -103,7 +105,53 @@
   padding-left: 5%;
   padding-top: 2%;
   padding-bottom: 2%;
+  padding-right: 6%;
+  font-size: 20px;
+  font-style: italic;
+  
 }
-.btn{
+button{
+  padding: 2%;
   font-weight: bold;
+  border-radius: 20px;
+  height: 40px;
+  width: 80px;
+
+}
+.list_section{
+  background-color: black;
+  color: white;
+  
+  padding: 8%;
+  font-size: 20px;
+  
+ 
+
+  
+}
+h1{
+  font-style: normal;
+}
+#edit-btn{
+  margin-right: 50%;
+  margin-left: 5%;
+}
+img{
+  border-radius: 20px;
+  width: 400px;
+  height: 300px;
+}
+input, textarea{
+  height: 45px;
+  border-radius: 8px;
+  width: 300px;
+  font-size: 15px;
+}
+label{
+  padding-left: 5px;
+}
+#menu-btn{
+  margin-top: 20px;
+  width: 150px;
+  border: 2px solid rgb(71, 143, 30);
 }

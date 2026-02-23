@@ -53,8 +53,8 @@ let FoodMenu = ()=>{
                                 <p>{foodMenu.description}</p>
                                 <p>Price:${foodMenu.price}</p>
                                 <img src={foodMenu.image} alt={foodMenu.name} width="200"></img>
-                                <div class="btn">
-                                    <button>Edit</button>
+                                <div>
+                                    <button id="edit-btn">Edit</button>
                                     <button>Delete</button>
                                 </div>
                                 <br></br><br></br>
@@ -65,7 +65,7 @@ let FoodMenu = ()=>{
             }
 
         </div>
-        <div>
+        <div class="list_section">
             <h1>Add Food Menu</h1>
             <form>
                 <div>
@@ -78,14 +78,14 @@ let FoodMenu = ()=>{
 
                 </div>
                 <div>
-                    <label>Price</label><br></br>
+                    <label>Price:</label><br></br>
                     <input type="number" name="price" value={price} onChange={(e)=>setPrice(e.target.value)}></input>
                 </div>
                 <div>
                     <label>Image URL:</label><br></br>
                     <input type="text" name="image" value={image} onChange={(e)=>setImage(e.target.value)}></input>
                 </div>
-                <button type="submit" onClick={handleSubmit}>Add Food Menu</button>
+                <button id="menu-btn" type="submit" onClick={handleSubmit}>Add Food Menu</button>
             </form>
         </div>
         
