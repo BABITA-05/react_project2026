@@ -14,7 +14,7 @@ let FoodMenu = ()=>{
             id: 2,
             name:"Burger",
             price:8,
-            description:"Juicy beef burger with lettuce, tomato, and cheese",
+            description:"Juicy chicken burger with lettuce, tomato, and cheese",
             image:"https://www.foodandwine.com/thmb/DI29Houjc_ccAtFKly0BbVsusHc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/crispy-comte-cheesburgers-FT-RECIPE0921-6166c6552b7148e8a8561f7765ddf20b.jpg"
         },
     ])
@@ -35,6 +35,35 @@ let FoodMenu = ()=>{
         }
         setFoodMenuList([...foodMenuList, data])
 
+    };
+    const handleEdit = (data) =>{
+        setName(data.name);
+        setDescription(data.description);
+        setPrice(data.price);
+        setImage(data.image);
+        setIsEdit(true);
+        setEditId(data.id);
+    }
+    const[isEdit, setIsEdit]= useState(false)
+    const[editId, setEditId] = useState(null)
+    const handleEditMenu = (e) =>{
+        e.preventDefault();
+        let foundFm = foodMenuList.find(
+            (ele) =>{
+                return ele.id === editId
+            }
+        )
+        foundFm.name=name;
+        foundFm.description=description;
+        foundFm.price=price;
+        foundFm.image=image;
+        setFoodMenuList([...foodMenuList])
+        //back to normal state
+        setName("");
+        setDescription("");
+        setImage("");
+        setIsEdit(false);
+        setEditId(null);
     }
 
     return(
@@ -54,7 +83,7 @@ let FoodMenu = ()=>{
                                 <p>Price:${foodMenu.price}</p>
                                 <img src={foodMenu.image} alt={foodMenu.name} width="200"></img>
                                 <div>
-                                    <button id="edit-btn">Edit</button>
+                                    <button id="edit-btn" onClick={()=>handleEdit(foodMenu )}>Edit</button>
                                     <button>Delete</button>
                                 </div>
                                 <br></br><br></br>
@@ -67,7 +96,7 @@ let FoodMenu = ()=>{
         </div>
         <div class="list_section">
             <h1>Add Food Menu</h1>
-            <form>
+            <form onSubmit={isEdit ? handleEditMenu : handleSubmit}>
                 <div>
                     <label>Name:</label><br></br>
                     <input type="text" name="name" value={name} onChange={(e)=>setName(e.target.value)}></input>
@@ -85,7 +114,7 @@ let FoodMenu = ()=>{
                     <label>Image URL:</label><br></br>
                     <input type="text" name="image" value={image} onChange={(e)=>setImage(e.target.value)}></input>
                 </div>
-                <button id="menu-btn" type="submit" onClick={handleSubmit}>Add Food Menu</button>
+                <button id="menu-btn" type="submit" >{isEdit? "Update Food":"Add Food"}</button>
             </form>
         </div>
         

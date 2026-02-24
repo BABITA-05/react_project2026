@@ -14,10 +14,25 @@
   padding: 17px 20px;
 }
 .home{
-  margin-left: 10%;
-  margin-right: 10%;
+  padding-left: 2%;
+  padding-right: 2%;
+  padding-bottom: 8%;
+  font-size: 15px;
+  background-color: black;
+  
+
   
 }
+#home1{
+  color: white;
+}
+p{
+  color: white;
+}
+/* .homescreen{
+  background-color: black;
+  color: white;
+} */
 
 .login {
   display: flex;
@@ -112,6 +127,7 @@
 }
 button{
   padding: 2%;
+  
   font-weight: bold;
   border-radius: 20px;
   height: 40px;
@@ -121,7 +137,7 @@ button{
 .list_section{
   background-color: black;
   color: white;
-  
+  /* position: fixed; */
   padding: 8%;
   font-size: 20px;
   
@@ -134,7 +150,7 @@ h1{
 }
 #edit-btn{
   margin-right: 50%;
-  margin-left: 5%;
+  margin-left: 3%;
 }
 img{
   border-radius: 20px;
