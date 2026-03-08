@@ -44,6 +44,12 @@ let FoodMenu = ()=>{
         setIsEdit(true);
         setEditId(data.id);
     }
+    const handleDelete = (id) => {
+    const confirmDelete = window.confirm("Are you sure you want to delete?");
+    if (confirmDelete) {
+        setFoodMenuList(foodMenuList.filter((item) => item.id !== id));
+    }
+}; 
     const[isEdit, setIsEdit]= useState(false)
     const[editId, setEditId] = useState(null)
     const handleEditMenu = (e) =>{
@@ -84,7 +90,7 @@ let FoodMenu = ()=>{
                                 <img src={foodMenu.image} alt={foodMenu.name} width="200"></img>
                                 <div>
                                     <button id="edit-btn" onClick={()=>handleEdit(foodMenu )}>Edit</button>
-                                    <button>Delete</button>
+                                    <button onClick={() => handleDelete(FoodMenu.id)}>Delete</button>
                                 </div>
                                 <br></br><br></br>
                             </div>
