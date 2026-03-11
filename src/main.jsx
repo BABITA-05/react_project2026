@@ -9,6 +9,12 @@ import FoodMenu from './pages/FoodMenu'
 import ControlledFormExample from './pages/ControlFormExample'
 import UnControlledFormExample from './pages/UnControlFormExample'
 import ForgotPassword from './pages/ForgotPassword'
+import FormValidation from './day8/FormValidation'
+import UseEffectHook from './day9/UseEffectHook'
+import UseEffectWithCleanup from './day9/UseEffectWithCleanup'
+import UseContexHook from './day9/UseContexHook'
+import SecondContext from './day9/SecondContext'
+
 
 
 createRoot(document.getElementById('root')).render(
@@ -23,6 +29,11 @@ createRoot(document.getElementById('root')).render(
       <Route path="cForm" element={<ControlledFormExample/>}></Route>
       <Route path="ucForm" element={<UnControlledFormExample/>}></Route>
       <Route path="fp" element={<ForgotPassword/>}></Route>
+      <Route path="form-valid" element={<FormValidation/>}></Route>
+      <Route path="useEffect" element={<UseEffectHook/>}></Route>
+      <Route path="useEffectcleanup" element={<UseEffectWithCleanup/>}></Route>
+      <Route path="contexthook" element={<UseContexHook/>}></Route>
+      <Route path="secondContext" element={<SecondContext/>}></Route>
 
       </Route>
      </Routes>

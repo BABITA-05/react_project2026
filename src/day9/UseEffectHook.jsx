@@ -1,0 +1,63 @@
+import React, { useState } from 'react'
+import { useEffect } from 'react';
+
+const UseEffectHook = () => {
+    const [count, setCount]=useState(0);
+    //no dependency array-runs on every render
+    useEffect(
+        ()=>{
+            console.log("useEffect called on every render")
+        },
+    )
+    //empty dependency array-runs only on innitial render
+    useEffect(
+        ()=>{
+            console.log("useEffect called on initial render")
+        },
+        []
+    )
+    //with dependency array-runs only when count changes
+    
+    useEffect(
+        ()=>{
+            console.log("useEffect called with dpendency array")
+        },
+        [count]
+    )
+     
+    
+    useEffect(
+        ()=>{
+            fetch('https://jsonplaceholder.typicode.com/todos/1')
+      .then(response => response.json())
+      .then(json => console.log(json))
+        },
+        []
+    )
+    const calculate = ()=>{
+        let sum=50;
+        sum+=count;
+        return sum;
+    }
+    useEffect(
+        ()=>{
+            let res = calculate();
+            console.log("Calcualted rsult: ", res);
+        },
+        [count]
+    )
+
+
+    
+
+  return (
+    <div>
+        <h3>useEffect Hook Example</h3>
+        
+        <p>Count:{count}</p>
+        <button onClick={()=>setCount(count+1)}>Increment</button>
+    </div>
+  )
+}
+
+export default UseEffectHook
