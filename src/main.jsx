@@ -14,6 +14,11 @@ import UseEffectHook from './day9/UseEffectHook'
 import UseEffectWithCleanup from './day9/UseEffectWithCleanup'
 import UseContexHook from './day9/UseContexHook'
 import SecondContext from './day9/SecondContext'
+import UseMemoComponent from './day9/UseMemoComponent'
+import UseCallbackComponent from './day9/UseCallbackComponent'
+import TodoExample from './day9/TodoExample'
+import UseReducerHookExample from './day9/UseReducerHookExample'
+import CompA from './day11/Users'
 
 
 
@@ -34,6 +39,11 @@ createRoot(document.getElementById('root')).render(
       <Route path="useEffectcleanup" element={<UseEffectWithCleanup/>}></Route>
       <Route path="contexthook" element={<UseContexHook/>}></Route>
       <Route path="secondContext" element={<SecondContext/>}></Route>
+      <Route path="usememo" element={<UseMemoComponent/>}></Route>
+      <Route path="usecallback" element={<UseCallbackComponent/>}></Route>
+      <Route path="todo" element={<TodoExample/>}></Route>
+      <Route path="reducerhook" element={<UseReducerHookExample/>}></Route>
+      <Route path="comp" element={<CompA/>}></Route>
 
       </Route>
      </Routes>
